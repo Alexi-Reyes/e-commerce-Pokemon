@@ -1,4 +1,17 @@
 .product {
     background-color: bisque;
     border: solid black 1px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.product.fire {
+    border: solid red 1px;
 }

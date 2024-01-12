@@ -17,11 +17,26 @@
         
         <div class="products-content">
             <section class="filter">
-                <select>
-                    <option value="option1">Type :</option>
+                <select id="typeFilter">
+                    <option value="option1">All types</option>
+                    <option value="normal">Normal</option>
                     <option value="fire">Fire</option>
                     <option value="water">Water</option>
+                    <option value="electric">Electric</option>
                     <option value="grass">Grass</option>
+                    <option value="ice">Ice</option>
+                    <option value="fighting">Fighting</option>
+                    <option value="poison">Poison</option>
+                    <option value="ground">Ground</option>
+                    <option value="flying">Flying</option>
+                    <option value="psychic">Psychic</option>
+                    <option value="bug">Bug</option>
+                    <option value="rock">Rock</option>
+                    <option value="ghost">Ghost</option>
+                    <option value="dragon">Dragon</option>
+                    <option value="dark">Dark</option>
+                    <option value="steel">Steel</option>
+                    <option value="fairy">Fairy</option>
                 </select>
                 <label for="level-range">Level :</label>
                 <input type="range" name="level-range">
@@ -29,7 +44,7 @@
                 <input type="range" name="price-range">
             </section>
             <section class="products">
-                <input type="search">
+                <input id="searchPokemon" type="search">
                 <div class="products-grid"></div>
             </section>
         </div>
