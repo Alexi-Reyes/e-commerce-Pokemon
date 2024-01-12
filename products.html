@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>e-commerce Pokemon</title>
+        <link rel="stylesheet" href="sass/style.css">
+        <script src="main.js"></script>
+    </head>
+    
+    <body>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Pokemon</a>
+            <a href="basket.html">Basket</a>
+        </nav>
+        
+        <div class="products-content">
+            <section class="filter">
+                <select>
+                    <option value="option1">Type :</option>
+                    <option value="fire">Fire</option>
+                    <option value="water">Water</option>
+                    <option value="grass">Grass</option>
+                </select>
+                <label for="level-range">Level :</label>
+                <input type="range" name="level-range">
+                <label for="price-range">Price :</label>
+                <input type="range" name="price-range">
+            </section>
+            <section class="products">
+                <input type="search">
+                <div class="products-grid"></div>
+            </section>
+        </div>
+    </body>
+</html>
