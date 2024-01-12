@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector("#typeFilter").addEventListener('change', (event) => {
         const productElements = document.querySelectorAll('.product');
 
-        if (event.target.value != "All types") {
+        if (event.target.value != "all") {
             for (const productElement of productElements) {
                 if (productElement.classList.contains(event.target.value)) {
                     productElement.style.display = 'flex';
