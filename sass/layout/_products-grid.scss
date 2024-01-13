@@ -2,4 +2,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
+    gap: 20px;
+    padding-block: 20px;
+}
+
+.pokeball {
+    background-color: blue;
 }

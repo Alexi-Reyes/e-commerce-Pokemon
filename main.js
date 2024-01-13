@@ -12,32 +12,35 @@ fetch(`https://pokeapi.co/api/v2/pokemon?limit=20`)
             let pokemonTypeArray = [];
 
             const productDiv = document.createElement('div');
-            productDiv.className = `product`;
-            pokeData.types.forEach(element => {
-                productDiv.className += ` ${element.type.name}`
-                pokemonTypeArray.push(element.type.name)
-            });
+            productDiv.className = `product ${pokeData.types[0].type.name}`;
+
             document.querySelector(".products-grid").appendChild(productDiv);
 
-            document.querySelectorAll(".product")[pokemonIndex].innerHTML += `${pokeData.name}`
+            const productTitle = document.createElement('h3');
+            productTitle.textContent = pokeData.name;
+            productTitle.className = "product-title";
+            document.querySelectorAll(".product")[pokemonIndex].appendChild(productTitle);
 
             const productImg = document.createElement('img');
             productImg.src = `${pokeData.sprites.front_default}`;
             document.querySelectorAll(".product")[pokemonIndex].appendChild(productImg);
 
+            const typesDiv = document.createElement('div');
+            typesDiv.className = `types-wrapper`;
+            document.querySelectorAll(".product")[pokemonIndex].appendChild(typesDiv)
 
             pokeData.types.forEach(element => {
                 const pokemonTypes = document.createElement("p")
                 pokemonTypes.textContent = element.type.name;
                 pokemonTypes.className = `type-tag ${element.type.name}`;
-                document.querySelectorAll(".product")[pokemonIndex].appendChild(pokemonTypes);
+                document.querySelectorAll(".types-wrapper")[pokemonIndex].appendChild(pokemonTypes);
+                pokemonTypeArray.push(element.type.name)
             });
 
             const productBtn = document.createElement('button');
             productBtn.textContent = "Add to basket";
-            productBtn.className = "product-btn";
+            productBtn.className = "addto-basket-btn";
 
-            console.log(pokemonTypeArray)
             const pokemonInfo = {
                 "name": pokeData.name,
                 "type": pokemonTypeArray,
@@ -49,16 +52,15 @@ fetch(`https://pokeapi.co/api/v2/pokemon?limit=20`)
 
             productBtn.addEventListener('click', () => {
                 if (!localStorage.getItem('pokemonBasket')) {
-                    localStorage.setItem('pokemonBasket', JSON.stringify(pokemonInfo));
+                    localStorage.setItem('pokemonBasket', JSON.stringify([pokemonInfo]));
                 } else {
-                    newBasket = localStorage.getItem('pokemonBasket')
-                    newBasket += JSON.stringify(pokemonInfo)
-                    localStorage.setItem('pokemonBasket', newBasket);
+                    newBasket = JSON.parse(localStorage.getItem('pokemonBasket'))
+                    newBasket.push(pokemonInfo);
+                    localStorage.setItem('pokemonBasket', JSON.stringify(newBasket));
                 }
             });
             document.querySelectorAll(".product")[pokemonIndex].appendChild(productBtn);
 
-            
             pokemonIndex++;
         })
         .catch((error) => console.log(error));

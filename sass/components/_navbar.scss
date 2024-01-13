@@ -1,0 +1,41 @@
+.navbar {
+    background-color: #0A80D8;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-left {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 70px;
+            width: 70px;
+        }
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-right: 10px;
+
+        a {
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.nav-basket {
+    position: relative;
+}
+
+.basket-counter {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    border-radius: 50%;
+    color: white;
+}

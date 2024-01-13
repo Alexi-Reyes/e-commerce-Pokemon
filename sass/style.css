@@ -62,20 +62,240 @@ table {
   border-spacing: 0;
 }
 
-.product {
-  background-color: bisque;
+.product-title {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.type-tag {
+  width: 66px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.5rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+}
+
+.addto-basket-btn {
   border: solid black 1px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgb(180, 177, 177);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.type-tag.normal {
+  background-color: #aa9;
+}
+
+.type-tag.fire {
+  background-color: #f42;
+}
+
+.type-tag.water {
+  background-color: #39f;
+}
+
+.type-tag.electric {
+  background-color: #fc3;
+}
+
+.type-tag.grass {
+  background-color: #7c5;
+}
+
+.type-tag.ice {
+  background-color: #6cf;
+}
+
+.type-tag.fighting {
+  background-color: #b54;
+}
+
+.type-tag.poison {
+  background-color: #a59;
+}
+
+.type-tag.ground {
+  background-color: #db5;
+}
+
+.type-tag.flying {
+  background-color: #89f;
+}
+
+.type-tag.psychic {
+  background-color: #f59;
+}
+
+.type-tag.bug {
+  background-color: #ab2;
+}
+
+.type-tag.rock {
+  background-color: #ba6;
+}
+
+.type-tag.ghost {
+  background-color: #66b;
+}
+
+.type-tag.dragon {
+  background-color: #76e;
+}
+
+.type-tag.dark {
+  background-color: #754;
+}
+
+.type-tag.steel {
+  background-color: #aab;
+}
+
+.type-tag.fairy {
+  background-color: #e9e;
+}
+
+.navbar {
+  background-color: #0A80D8;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+.navbar-left img {
+  height: 70px;
+  width: 70px;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 10px;
+}
+.navbar-right a {
+  text-transform: uppercase;
+}
+
+.nav-basket {
+  position: relative;
+}
+
+.basket-counter {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  border-radius: 50%;
+  color: white;
+}
+
+.product {
+  background-size: cover;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-block: 10px;
 }
 .product img {
   width: 100px;
   height: 100px;
 }
+.product > * {
+  padding-block: 5px;
+}
+
+.types-wrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.product.normal {
+  background-color: #8d8d76;
+}
 
 .product.fire {
-  border: solid red 1px;
+  background-color: #e72400;
+}
+
+.product.water {
+  background-color: #007af5;
+}
+
+.product.electric {
+  background-color: #f5b800;
+}
+
+.product.grass {
+  background-color: #59b235;
+}
+
+.product.ice {
+  background-color: #1fb4ff;
+}
+
+.product.fighting {
+  background-color: #964436;
+}
+
+.product.poison {
+  background-color: #88447a;
+}
+
+.product.ground {
+  background-color: #cca329;
+}
+
+.product.flying {
+  background-color: #3a56ff;
+}
+
+.product.psychic {
+  background-color: #ff1170;
+}
+
+.product.bug {
+  background-color: #88961b;
+}
+
+.product.rock {
+  background-color: #a08e47;
+}
+
+.product.ghost {
+  background-color: #4747a0;
+}
+
+.product.dragon {
+  background-color: #4129e7;
+}
+
+.product.dark {
+  background-color: #5f4436;
+}
+
+.product.steel {
+  background-color: #82829b;
+}
+
+.product.fairy {
+  background-color: #e356e3;
+}
+
+#searchPokemon {
+  width: 100%;
+  padding-block: 5px;
+  border-radius: 20px;
+  padding-left: 10px;
 }
 
 .filter {
@@ -84,18 +304,37 @@ table {
   width: 200px;
 }
 
+.home-content {
+  height: calc(100vh - 70px);
+  background-image: url("../assets/images/home-wallpaper.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .products-content {
   display: flex;
+  margin-top: 10px;
 }
 
 .products {
   width: 100%;
+  padding-inline: 20px;
 }
 
 .products-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
+  gap: 20px;
+  padding-block: 20px;
+}
+
+.pokeball {
+  background-color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */

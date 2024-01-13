@@ -1,0 +1,11 @@
+.home-content {
+    height: calc(100vh - 70px);
+    background-image: url("../assets/images/home-wallpaper.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
