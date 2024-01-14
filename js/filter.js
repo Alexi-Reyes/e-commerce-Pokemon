@@ -46,7 +46,7 @@ const resetDisplayedPokemon = () => {
 }
 
 const getPokemon = () => {
-    fetch(`https://pokeapi.co/api/v2/pokemon?limit=20`) //1302
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=1302`) //1302
     .then((response) => response.json())
     .then((data) => {
       for (const pokemon of data.results) {
