@@ -1,14 +1,30 @@
-//get list of pokemon
+// search pokemon
 
-let pokemonIndex = 0;
-
-fetch(`https://pokeapi.co/api/v2/pokemon?limit=20`)
-  .then((response) => response.json())
-  .then((data) => {
-    for (const pokemon of data.results) {
-      fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector("#searchPokemonBtn").addEventListener('click', () => {
+        fetch(`https://pokeapi.co/api/v2/pokemon/${document.querySelector("#searchPokemon").value}`)
         .then((response) => response.json())
+
+        // old version 
+
+        //.then((pokeData) => {
+        //    document.querySelector(".products-grid").innerHTML = "";
+//
+        //                
+        //    const productDiv = document.createElement('div');
+        //    productDiv.className = "product";
+        //    document.querySelector(".products-grid").appendChild(productDiv);
+    //
+        //    document.querySelector(".product").innerHTML = `${pokeData.name}`
+    //
+        //    const imgElement = document.createElement('img');
+        //    imgElement.src = `${pokeData.sprites.front_default}`;
+        //    document.querySelector(".product").appendChild(imgElement);
+        //})
         .then((pokeData) => {
+            // doesnt work with this line for some reason
+            //document.querySelector(".products-grid").innerHTML = "";
+
             let pokemonTypeArray = [];
 
             const productDiv = document.createElement("div");
@@ -57,39 +73,14 @@ fetch(`https://pokeapi.co/api/v2/pokemon?limit=20`)
                 document.querySelector(".basket-counter").textContent = `${JSON.parse(localStorage.getItem('pokemonBasket')).length}`
 
                 setTimeout(function() {
-                document.querySelector(".basket-counter").classList.remove("tada")
-                document.querySelector(".basket-counter").classList.remove("change-color")
+                    document.querySelector(".basket-counter").classList.remove("tada")
+                    document.querySelector(".basket-counter").classList.remove("change-color")
                 }, 500);
             });
             document.querySelectorAll(".product")[pokemonIndex].appendChild(productBtn);
 
             pokemonIndex++;
         })
-        .catch((error) => console.log(error));
-    }
+        .catch((error) => document.querySelector(".products-grid").innerHTML = `No pokemon found ${error}`)
+    });
 });
-
-
-
-// type filter 
-
-//document.addEventListener('DOMContentLoaded', () => {
-//    document.querySelector("#typeFilter").addEventListener('change', (event) => {
-//        const productElements = document.querySelectorAll('.product');
-//
-//        if (event.target.value != "all") {
-//            for (const productElement of productElements) {
-//                if (productElement.classList.contains(event.target.value)) {
-//                    productElement.style.display = 'flex';
-//                } else {
-//                    productElement.style.display = 'none';
-//                }
-//            }
-//        } else {
-//            for (const productElement of productElements) {
-//                productElement.style.display = 'flex';
-//            }
-//        }
-//    });
-//});
-//

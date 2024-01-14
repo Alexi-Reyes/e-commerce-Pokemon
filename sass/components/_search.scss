@@ -1,6 +1,14 @@
+.search-wrapper {
+    display: flex;
+}
+
 #searchPokemon {
     width: 100%;
     padding-block: 5px;
     border-radius: 20px;
     padding-left: 10px;
+}
+
+#searchPokemonBtn:hover {
+    cursor: pointer;
 }

@@ -89,6 +89,27 @@ table {
   font-size: 12px;
 }
 
+.continue-shopping-btn, .clear-local-storage-btn, .checkout-btn, .apply-btn {
+  padding: 5px;
+  border: solid black 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.continue-shopping-btn:hover, .clear-local-storage-btn:hover, .checkout-btn:hover, .apply-btn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.accordion-gen, .accordion-types {
+  text-transform: uppercase;
+}
+
+.checkout-btn {
+  margin-block: 10px;
+}
+
 .type-tag.normal {
   background-color: #aa9;
 }
@@ -185,6 +206,9 @@ table {
 .navbar-right a {
   text-transform: uppercase;
 }
+.navbar a:hover {
+  cursor: pointer;
+}
 
 .nav-basket {
   position: relative;
@@ -198,6 +222,41 @@ table {
   color: white;
 }
 
+.tada {
+  animation-name: tada;
+  animation-duration: 0.5s;
+}
+
+.change-color {
+  color: red;
+  animation: changeColor 0.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes changeColor {
+  0% {
+    color: red;
+  }
+  100% {
+    color: white;
+  }
+}
 .product {
   background-size: cover;
   border-radius: 10px;
@@ -205,13 +264,25 @@ table {
   align-items: center;
   flex-direction: column;
   padding-block: 10px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 .product img {
   width: 100px;
   height: 100px;
 }
+.product h3 {
+  text-align: center;
+}
 .product > * {
   padding-block: 5px;
+}
+.product > a:hover, .product button:hover {
+  cursor: pointer;
+}
+.product:hover {
+  scale: 1.1;
 }
 
 .types-wrapper {
@@ -291,6 +362,10 @@ table {
   background-color: #e356e3;
 }
 
+.search-wrapper {
+  display: flex;
+}
+
 #searchPokemon {
   width: 100%;
   padding-block: 5px;
@@ -298,10 +373,80 @@ table {
   padding-left: 10px;
 }
 
+#searchPokemonBtn:hover {
+  cursor: pointer;
+}
+
+.basket {
+  padding-inline: 20px;
+}
+
+.basket-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+.basket-header h1 {
+  font-size: 32px;
+}
+
+.basket-item {
+  display: flex;
+  padding-block: 10px;
+}
+
+.basket-item-info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  min-width: 200px;
+}
+.basket-item-info h3 {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  padding-block: 5px;
+}
+.basket-item-info .basket-item-info-types-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.quantity-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.quantity-input {
+  width: 40px;
+}
+
+.checkpoint-btn-wrapper {
+  display: flex;
+  justify-content: right;
+}
+
 .filter {
   display: flex;
   flex-direction: column;
   width: 200px;
+  border-right: solid black 1px;
+}
+.filter-content {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 10px;
+}
+.filter-heading {
+  margin-top: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
 }
 
 .home-content {
@@ -315,14 +460,20 @@ table {
   flex-direction: column;
 }
 
+.pokemon-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .products-content {
   display: flex;
-  margin-top: 10px;
 }
 
 .products {
   width: 100%;
   padding-inline: 20px;
+  margin-top: 10px;
 }
 
 .products-grid {

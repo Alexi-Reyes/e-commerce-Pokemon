@@ -7,13 +7,29 @@
     flex-direction: column;
     padding-block: 10px;
 
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+
     img {
         width: 100px;
         height: 100px;
     }
 
+    h3 {
+        text-align: center;
+    }
+
     >* {
         padding-block: 5px;
+    }
+
+    >a:hover, button:hover {
+        cursor: pointer;
+    }
+
+    &:hover {
+        scale: 1.1;
     }
 }
 

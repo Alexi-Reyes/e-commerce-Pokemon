@@ -2,4 +2,21 @@
     display: flex;
     flex-direction: column;
     width: 200px;
+    border-right: solid black 1px;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        padding-inline: 10px;
+    }
+
+    &-heading {
+        margin-top: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+.hidden {
+    display: none;
 }

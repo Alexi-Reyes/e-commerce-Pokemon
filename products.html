@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>e-commerce Pokemon</title>
         <link rel="stylesheet" href="sass/style.css">
-        <script src="main.js"></script>
+        <script src="js/basket-counter.js"></script>
+        <script src="js/filter.js"></script>
     </head>
     
     <body>
@@ -27,35 +28,134 @@
         
         <div class="products-content">
             <section class="filter">
-                <h3>Filters</h3>
-                <select id="typeFilter">
-                    <option class="type-tag all" value="all">All types</option>
-                    <option class="type-tag normal" value="normal">Normal</option>
-                    <option class="type-tag fire" value="fire">Fire</option>
-                    <option class="type-tag water" value="water">Water</option>
-                    <option class="type-tag electric" value="electric">Electric</option>
-                    <option class="type-tag grass" value="grass">Grass</option>
-                    <option class="type-tag ice" value="ice">Ice</option>
-                    <option class="type-tag fighting" value="fighting">Fighting</option>
-                    <option class="type-tag poison" value="poison">Poison</option>
-                    <option class="type-tag ground" value="ground">Ground</option>
-                    <option class="type-tag flying" value="flying">Flying</option>
-                    <option class="type-tag psychic" value="psychic">Psychic</option>
-                    <option class="type-tag bug" value="bug">Bug</option>
-                    <option class="type-tag rock" value="rock">Rock</option>
-                    <option class="type-tag ghost" value="ghost">Ghost</option>
-                    <option class="type-tag dragon" value="dragon">Dragon</option>
-                    <option class="type-tag dark" value="dark">Dark</option>
-                    <option class="type-tag steel" value="steel">Steel</option>
-                    <option class="type-tag fairy" value="fairy">Fairy</option>
-                </select>
-                <label for="level-range">Level :</label>
-                <input type="range" name="level-range">
-                <label for="price-range">Price :</label>
-                <input type="range" name="price-range">
+                <div class="filter-content">
+                    <h3 class="filter-heading">Filters</h3>
+
+                    <hr/>
+                    <button class="accordion-gen">Generation :</button>
+                    <div class="accordion-gen-content hidden">
+                        <div>
+                            <input class="btn-filter-gen" value="1" type="checkbox" name="filter-gen1"/>
+                            <label class="" for="filter-gen1">Generation I</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-gen" value="2" type="checkbox" name="filter-gen2"/>
+                            <label class="" for="filter-gen2">Generation II</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-gen" value="3" type="checkbox" name="filter-gen3"/>
+                            <label class="" for="filter-gen3">Generation III</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-gen" value="4" type="checkbox" name="filter-gen4"/>
+                            <label class="" for="filter-gen4">Generation IV</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-gen" value="5" type="checkbox" name="filter-gen5"/>
+                            <label class="" for="filter-gen5">Generation V</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-gen" value="6" type="checkbox" name="filter-gen6"/>
+                            <label class="" for="filter-gen6">Generation VI</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-gen" value="7" type="checkbox" name="filter-gen7"/>
+                            <label class="" for="filter-gen7">Generation VII</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-gen" value="8" type="checkbox" name="filter-gen8"/>
+                            <label class="" for="filter-gen8">Generation VIII</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-gen" value="9" type="checkbox" name="filter-gen9"/>
+                            <label class="" for="filter-gen9">Generation IX</label>
+                        </div>
+                    </div>
+    
+                    <hr/>
+
+                    <button class="accordion-types">Types :</button>
+                    <div class="accordion-types-content hidden">
+                        <div>
+                            <input class="btn-filter-types" value="normal" type="checkbox" name="filter-normal"/>
+                            <label class="type-tag normal" for="filter-normal">Normal</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="fire" type="checkbox" name="filter-fire" />
+                            <label class="type-tag fire" for="filter-fire">Fire</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="water" type="checkbox" name="filter-water" />
+                            <label class="type-tag water" for="filter-water">Water</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="electric" type="checkbox" name="filter-electric" />
+                            <label class="type-tag electric" for="filter-electric">Electric</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="grass" type="checkbox" name="filter-grass" />
+                            <label class="type-tag grass" for="filter-grass">Grass</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="ice" type="checkbox" name="filter-ice" />
+                            <label class="type-tag ice" for="filter-ice">Ice</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="fighting" type="checkbox" name="filter-fighting" />
+                            <label class="type-tag fighting" for="filter-fighting">Fighting</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="poison" type="checkbox" name="filter-poison" />
+                            <label class="type-tag poison" for="filter-poison">Poison</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="ground" type="checkbox" name="filter-ground" />
+                            <label class="type-tag ground" for="filter-ground">Ground</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="flying" type="checkbox" name="filter-flying" />
+                            <label class="type-tag flying" for="filter-flying">Flying</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="psychic" type="checkbox" name="filter-psychic" />
+                            <label class="type-tag psychic" for="filter-psychic">Psychic</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="bug" type="checkbox" name="filter-bug" />
+                            <label class="type-tag bug" for="filter-bug">Bug</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="rock" type="checkbox" name="filter-rock" />
+                            <label class="type-tag rock" for="filter-rock">Rock</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="ghost" type="checkbox" name="filter-ghost" />
+                            <label class="type-tag ghost" for="filter-ghost">Ghost</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="dragon" type="checkbox" name="filter-dragon" />
+                            <label class="type-tag dragon" for="filter-dragon">Dragon</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="dark" type="checkbox" name="filter-dark" />
+                            <label class="type-tag dark" for="filter-dark">Dark</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="steel" type="checkbox" name="filter-steel" />
+                            <label class="type-tag steel" for="filter-steel">Steel</label>
+                        </div>
+                        <div>
+                            <input class="btn-filter-types" value="fairy" type="checkbox" name="filter-fairy" />
+                            <label class="type-tag fairy" for="filter-fairy">Fairy</label>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="products">
-                <input id="searchPokemon" type="search" placeholder="Search for pokemon">
+                <div class="search-wrapper">
+                    <input id="searchPokemon" type="search" placeholder="Search for pokemon">
+                    <button id="searchPokemonBtn">Search</button>
+                </div>
                 <div class="products-grid"></div>
             </section>
               

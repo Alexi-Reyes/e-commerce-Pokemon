@@ -1,0 +1,53 @@
+.basket {
+    padding-inline: 20px;
+}
+
+.basket-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+
+    h1 {
+        font-size: 32px;
+    }
+}
+
+.basket-item {
+    display: flex;
+    padding-block: 10px;
+}
+
+.basket-item-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    min-width: 200px;
+
+    h3 {
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        padding-block: 5px;
+    }
+
+    .basket-item-info-types-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+}
+
+.quantity-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.quantity-input {
+    width: 40px;
+}
+
+.checkpoint-btn-wrapper {
+    display: flex;
+    justify-content: right;
+}

@@ -20,6 +20,27 @@
     font-size: 12px;
 }
 
+.continue-shopping-btn, .clear-local-storage-btn, .checkout-btn, .apply-btn {
+    padding: 5px;
+    border: solid black 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.continue-shopping-btn:hover, .clear-local-storage-btn:hover, .checkout-btn:hover, .apply-btn:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.accordion-gen, .accordion-types {
+    text-transform: uppercase;
+}
+
+.checkout-btn {
+    margin-block: 10px;
+}
+
 .type-tag.normal {
     background-color: #aa9;
 }

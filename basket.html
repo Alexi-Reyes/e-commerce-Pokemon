@@ -6,6 +6,7 @@
         <title>e-commerce Pokemon</title>
         <link rel="stylesheet" href="sass/style.css">
         <script src="js/basket.js"></script>
+        <script src="js/basket-counter.js"></script>
     </head>
     
     <body>
@@ -26,13 +27,19 @@
         </nav>
         
         <section class="basket">
-            <h1>Your basket</h1>
-
+            <div class="basket-header">
+                <h1>Your basket</h1>
+                <div>
+                    <a href="products.html"><button class="continue-shopping-btn">Continue shopping</button></a>
+                    <button class="clear-local-storage-btn">Clear basket</button>
+                </div>
+            </div>
+            <hr/>
             <div class="basket-grid"></div>
-
-            <button class="clear-local-storage-btn">Clear basket</button>
-            <button>Continue shopping</button>
-            <button>Checkout</button>
+            <hr/>
+            <div class="checkpoint-btn-wrapper">
+                <button class="checkout-btn">Checkout</button>
+            </div>
         </section>
     </body>
 </html>
