@@ -209,6 +209,12 @@ table {
 .navbar a:hover {
   cursor: pointer;
 }
+@media screen and (max-width: 350px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
 
 .nav-basket {
   position: relative;
@@ -400,6 +406,21 @@ table {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 400px) {
+  .basket-item > div {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 400px) {
+  .basket-item {
+    align-items: center;
+    flex-direction: column;
+  }
+  .basket-item img {
+    height: 100px;
+    width: 100px;
+  }
+}
 
 .basket-item-info {
   display: flex;
@@ -433,6 +454,12 @@ table {
   justify-content: right;
 }
 
+@media screen and (max-width: 400px) {
+  .basket-right {
+    display: flex;
+    justify-content: center;
+  }
+}
 .filter {
   display: flex;
   flex-direction: column;
@@ -464,6 +491,12 @@ table {
   align-items: center;
   flex-direction: column;
 }
+.home-content h1 {
+  font-size: 32px;
+}
+.home-content h2 {
+  font-size: 24px;
+}
 
 .pokemon-info {
   display: flex;
@@ -487,6 +520,21 @@ table {
   width: 100%;
   gap: 20px;
   padding-block: 20px;
+}
+@media screen and (max-width: 950px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 750px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .pokeball {
