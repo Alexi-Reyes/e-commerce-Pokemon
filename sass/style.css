@@ -395,6 +395,11 @@ table {
   display: flex;
   padding-block: 10px;
 }
+.basket-item > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
 .basket-item-info {
   display: flex;

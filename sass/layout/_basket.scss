@@ -16,6 +16,12 @@
 .basket-item {
     display: flex;
     padding-block: 10px;
+
+    >div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .basket-item-info {
